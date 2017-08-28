@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="./src/css/style.css">
+	</head>
+	<body ng-app="currencyExchange" ng-controller="main">
+	
+	<div>
+		<base-currency></base-currency>
+		<transfered-currency></transfered-currency>
+	</div>
+
+	<script type="text/javascript" src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js'></script>
+
+	<script type="text/javascript" src='./src/app.js'></script>
+	<!-- include all the controllers -->
+	<script type="text/javascript" src='./src/controllers/main.js'></script>
+
+	<!-- include all the services -->
+	<script type="text/javascript" src='./src/services/apiService.js'></script>
+	<script type="text/javascript" src='./src/services/dataService.js'></script>
+
+	<!-- include all the directives --> 
+	<script type="text/javascript" src='./src/directives/baseCurrency.js'></script>
+	<script type="text/javascript" src='./src/directives/transferedCurrency.js'></script>
+
+	</body>
+</html>

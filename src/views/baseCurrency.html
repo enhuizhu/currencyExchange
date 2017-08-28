@@ -1,0 +1,9 @@
+<div class="base-currency-wrapper">
+    <div class='container'>
+        <select ng-model='dataService.base'>
+            <option ng-repeat='(k, v) in dataService.currencies track by k' value='{{k}}'>{{k}}</option>
+        </select>
+
+        <input type='number' ng-model='dataService.baseTotal'/>
+    </div>
+</div>

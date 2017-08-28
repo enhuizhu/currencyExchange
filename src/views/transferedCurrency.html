@@ -1,0 +1,9 @@
+<div class='transfered-currency-wrapper'>
+	<div class='container'>
+		<select ng-model='dataService.transfered'>
+            <option ng-repeat='(k, v) in dataService.rates track by k' value='{{k}}'>{{k}}</option>
+        </select>
+
+        <label>{{dataService.trasferTotal()}}</label>
+	</div>
+</div>
