@@ -5,10 +5,16 @@ angular.module('currencyExchange').service('dataService', function() {
 		currencies: {},
 		base: 'USD',
 		rates: {},
-		baseTotal: 0,
+		baseTotal: '',
 		transfered: 'AED',
-		trasferTotal: function() {
-			return (this.baseTotal * this.rates[this.transfered]).toFixed(2);
+		trasferTotal: '',
+		
+		calculateTransferedTotal: function() {
+			return parseFloat((this.baseTotal * this.rates[this.transfered]).toFixed(2));
+		},
+		
+		calculateBaseTotal: function() {
+			return parseFloat((this.trasferTotal / this.rates[this.transfered]).toFixed(2));
 		}
 	}	
 })

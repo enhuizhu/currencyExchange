@@ -4,6 +4,8 @@
             <option ng-repeat='(k, v) in dataService.rates track by k' value='{{k}}'>{{k}}</option>
         </select>
 
-        <label>{{dataService.trasferTotal()}}</label>
+        <input type='number' ng-model='dataService.trasferTotal' placeholder="0" ng-change="change()"/>
+
+        <div class='clear'></div>
 	</div>
 </div>

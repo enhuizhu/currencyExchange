@@ -1,3 +1,52 @@
+* {
+  box-sizing: border-box; }
 
+body {
+  margin: 0px;
+  background-color: #f5f4f4;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif; }
+
+.clear {
+  clear: both; }
+
+::-webkit-input-placeholder {
+  /* Chrome */
+  color: #c3c2c2; }
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #c3c2c2; }
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #c3c2c2;
+  opacity: 1; }
+
+:-moz-placeholder {
+  /* Firefox 4 - 18 */
+  color: #c3c2c2;
+  opacity: 1; }
+
+.app-container {
+  display: flex;
+  flex-direction: column; }
+  .app-container .container {
+    padding: 40px 20px;
+    font-size: 36px; }
+    .app-container .container * {
+      font-size: 36px; }
+    .app-container .container select {
+      float: left; }
+    .app-container .container input, .app-container .container label {
+      float: right; }
+    .app-container .container input {
+      width: calc(100% - 114px);
+      text-align: right;
+      background: transparent;
+      border: none; }
+  .app-container .base-currency-wrapper {
+    background-color: white; }
+  .app-container .transfered-currency-wrapper {
+    flex-grow: 1; }
 
 /*# sourceMappingURL=style.css.map */

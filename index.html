@@ -2,10 +2,11 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="./src/css/style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 	<body ng-app="currencyExchange" ng-controller="main">
 	
-	<div>
+	<div class='app-container'>
 		<base-currency></base-currency>
 		<transfered-currency></transfered-currency>
 	</div>
@@ -19,10 +20,14 @@
 	<!-- include all the services -->
 	<script type="text/javascript" src='./src/services/apiService.js'></script>
 	<script type="text/javascript" src='./src/services/dataService.js'></script>
+	<script type="text/javascript" src='./src/services/notificationService.js'></script>
 
 	<!-- include all the directives --> 
 	<script type="text/javascript" src='./src/directives/baseCurrency.js'></script>
 	<script type="text/javascript" src='./src/directives/transferedCurrency.js'></script>
+
+	<!-- include all the constants -->
+	<script type="text/javascript" src='./src/constants/events.js'></script>
 
 	</body>
 </html>

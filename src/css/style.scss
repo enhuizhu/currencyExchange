@@ -1,5 +1,70 @@
 //main scss
+$placeholderColor: #c3c2c2;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    background-color: #f5f4f4;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
+}
+
+.clear {
+    clear: both;
+}
+
+::-webkit-input-placeholder { /* Chrome */
+  color: $placeholderColor;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $placeholderColor;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: $placeholderColor;
+  opacity: 1;
+}
+:-moz-placeholder { /* Firefox 4 - 18 */
+  color: $placeholderColor;
+  opacity: 1;
+}
 
 .app-container {
-	
+    
+    display: flex;
+    flex-direction: column;
+
+    .container {
+        $fontSize: 36px;
+        padding: 40px 20px;
+        font-size: $fontSize;
+        
+        * {
+            font-size: 36px;
+        }
+
+        select {
+            float: left;
+        }
+
+        input, label {
+            float: right;
+        }
+
+        input {
+            width: calc(100% - 114px);
+            text-align: right;
+            background: transparent;
+            border: none;
+        }
+    }
+    
+    .base-currency-wrapper {
+        background-color: white;
+    }
+
+    .transfered-currency-wrapper {
+        flex-grow: 1;
+    }
 }
