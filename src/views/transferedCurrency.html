@@ -1,12 +1,12 @@
 <div class='transfered-currency-wrapper'>
-	<rate-box></rate-box>
-	<div class='container'>
-		<select ng-model='dataService.transfered'>
+    <rate-box></rate-box>
+    <div class='container'>
+        <select ng-model='dataService.transfered'>
             <option ng-repeat='(k, v) in dataService.rates track by k' value='{{k}}'>{{k}}</option>
         </select>
 
         <input type='text' ng-model='dataService.trasferTotal' placeholder="0" ng-change="change()" ng-keydown="keydown($event)"/>
 
         <div class='clear'></div>
-	</div>
+    </div>
 </div>
