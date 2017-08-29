@@ -9,12 +9,24 @@ class main {
     }
 
     init() {
+        // this.apiService.getAll().then(results => {
+        //     console.log('results', results);
+        //     this.dataService.currencies = results[0].data;
+        //     this.dataService.base = results[1].data.base;
+        //     this.dataService.rates = results[1].data.rates;
+        // });
+        this.updateDataModel();
+    }
+
+    updateDataModel() {
         this.apiService.getAll().then(results => {
-            console.log('results', results);
             this.dataService.currencies = results[0].data;
             this.dataService.base = results[1].data.base;
             this.dataService.rates = results[1].data.rates;
         });
+
+        //excute the same function evey 10 seconds
+        setTimeout(this.updateDataModel.bind(this), 10000);
     }
 }
 

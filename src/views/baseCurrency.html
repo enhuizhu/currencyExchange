@@ -1,6 +1,6 @@
 <div class="base-currency-wrapper">
     <div class='container'>
-        <select ng-model='dataService.base'>
+        <select ng-model='dataService.base' disabled>
             <option ng-repeat='(k, v) in dataService.currencies track by k' value='{{k}}'>{{k}}</option>
         </select>
 

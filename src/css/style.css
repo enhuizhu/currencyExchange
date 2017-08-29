@@ -47,6 +47,31 @@ body {
   .app-container .base-currency-wrapper {
     background-color: white; }
   .app-container .transfered-currency-wrapper {
-    flex-grow: 1; }
+    flex-grow: 1;
+    position: relative; }
+  .app-container .rate-box-wrapper {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: -22px; }
+    .app-container .rate-box-wrapper .rate-box {
+      padding: 10px;
+      border-radius: 5px;
+      border: solid 1px #dad9d9;
+      background: white;
+      text-align: center;
+      color: #5792c5;
+      display: inline-block; }
+  .app-container .exchange-btn {
+    position: fixed;
+    width: 90%;
+    padding: 15px;
+    background: #e42f4e;
+    color: white;
+    text-align: center;
+    bottom: 15px;
+    left: 5%;
+    border-radius: 24px;
+    font-size: 20px; }
 
 /*# sourceMappingURL=style.css.map */

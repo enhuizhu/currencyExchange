@@ -9,6 +9,7 @@ angular.module('currencyExchange').directive('baseCurrency', function(dataServic
             $scope.dataService = dataService;
 
             $scope.changeBase = function() {
+                dataService.baseTotal = - Math.abs(dataService.baseTotal)
                 notificationService.pub(events.UPDATE_BASE_TOTAL);
             }
 

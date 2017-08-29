@@ -10,11 +10,17 @@ angular.module('currencyExchange').service('dataService', function() {
 		trasferTotal: '',
 		
 		calculateTransferedTotal: function() {
-			return parseFloat((this.baseTotal * this.rates[this.transfered]).toFixed(2));
+			const absoluteTotal = parseFloat((Math.abs(this.baseTotal) * this.rates[this.transfered]).toFixed(2))
+			
+			if (isNaN(absoluteTotal)) {
+				return '';
+			}
+
+			return '+' + absoluteTotal;
 		},
 		
 		calculateBaseTotal: function() {
-			return parseFloat((this.trasferTotal / this.rates[this.transfered]).toFixed(2));
+			return -parseFloat((Math.abs(this.trasferTotal) / this.rates[this.transfered]).toFixed(2));
 		}
 	}	
 })
